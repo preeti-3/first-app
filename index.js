@@ -60,6 +60,7 @@ const serviceData = [
 // Rest Api
 app.get(`/index.html`, (req, res) => {
     console.log("request", req)
+    // res.setHeader('Content-Type', 'text/html');
     const data = fs.readFileSync('index.html')
     res.statusCode = 200;
     res.end(data.toString())
